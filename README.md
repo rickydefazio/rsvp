@@ -2,6 +2,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Coming Soon in 2020
 
-* Adding MongoDB for data persistence.
-* Incorporating a SignIn/SignOut feature to differentiate users.
-* Authentication.
+- Adding MongoDB for data persistence.
+- Incorporating a SignIn/SignOut with authentication to differentiate users.
