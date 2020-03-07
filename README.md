@@ -1,6 +1,6 @@
 # Event Invitation App 
 
-## Checklist
+### Goals
 - [x] Redesign theme
 - [ ] Data persistence
 - [ ] Refactor to use React hooks
