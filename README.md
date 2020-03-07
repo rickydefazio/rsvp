@@ -1,6 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Event Invitation App 
 
-## Changes Coming Soon
-
-- Adding MongoDB for data persistence.
-- Incorporating a SignIn/SignOut with authentication to differentiate users.
+### Goals
+- [x] Redesign theme
+- [ ] Data persistence
+- [ ] Refactor to use React hooks
+- [ ] Email confirmation from invitees
