@@ -3,12 +3,19 @@ import Header from './Header';
 import MainContent from './MainContent';
 
 class App extends Component {
-
   state = {
     isFiltered: false,
-    pendingGuest: "",
+    pendingGuest: '',
     guests: []
   };
+
+  componentDidMount() {
+    this.setState(JSON.parse(localStorage.getItem('state')));
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem('state', JSON.stringify(this.state));
+  }
 
   lastGuestId = 0;
 
@@ -31,16 +38,14 @@ class App extends Component {
       })
     });
 
-  toggleConfirmation = id =>
-    this.toggleGuestProperty("isConfirmed", id);
+  toggleConfirmation = id => this.toggleGuestProperty('isConfirmed', id);
 
   removeGuest = id =>
     this.setState({
       guests: this.state.guests.filter(guest => id !== guest.id)
     });
 
-  toggleEditing = id =>
-    this.toggleGuestProperty("isEditing", id);
+  toggleEditing = id => this.toggleGuestProperty('isEditing', id);
 
   setName = (name, id) =>
     this.setState({
@@ -55,11 +60,9 @@ class App extends Component {
       })
     });
 
-  toggleFilter = () =>
-    this.setState({ isFiltered: !this.state.isFiltered });
+  toggleFilter = () => this.setState({ isFiltered: !this.state.isFiltered });
 
-  handleNameInput = e =>
-    this.setState({ pendingGuest: e.target.value });
+  handleNameInput = e => this.setState({ pendingGuest: e.target.value });
 
   newGuestSubmitHandler = e => {
     e.preventDefault();
@@ -76,13 +79,13 @@ class App extends Component {
       ],
       pendingGuest: ''
     });
-  }
+  };
 
   getTotalInvited = () => this.state.guests.length;
 
   getAttendingGuests = () =>
     this.state.guests.reduce(
-      (total, guest) => guest.isConfirmed ? total + 1 : total,
+      (total, guest) => (guest.isConfirmed ? total + 1 : total),
       0
     );
 
@@ -92,7 +95,7 @@ class App extends Component {
     const numberUnconfirmed = totalInvited - numberAttending;
 
     return (
-      <div className="App">
+      <div className='App'>
         <Header
           newGuestSubmitHandler={this.newGuestSubmitHandler}
           pendingGuest={this.state.pendingGuest}
