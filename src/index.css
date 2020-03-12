@@ -64,7 +64,7 @@ form {
 form button {
   padding: 0 1em;
   font-size: 1em;
-  background: #7bcbc4;
+  background: #337184;
   border-radius: 0.2em;
 }
 
@@ -142,11 +142,11 @@ li button {
   border-radius: 0.3em;
   padding: 0.4em 0.6em;
   color: white;
-  background: #58b7cd;
+  background: #337184;
 }
 
 li button:last-child {
-  background: rgba(88, 183, 205, 0.5);
+  background: rgba(88, 183, 205, 0.8);
 }
 
 div > input:last-child {
