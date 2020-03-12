@@ -1,6 +1,6 @@
 # Event Invitation App
 
-### Goals
+### Goals for Improvement
 
 - [x] Redesign theme
 - [x] Data persistence
